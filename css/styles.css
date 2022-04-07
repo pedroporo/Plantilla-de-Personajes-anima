@@ -1,0 +1,55 @@
+ul.inline > li {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+.ki-table .table {
+  margin-bottom: 5px;
+}
+
+.ki-table th, td[class*="Accumulation_"], td[class*="Ki_"] {
+  text-align: right;
+}
+
+.ki-table .table-condensed thead > tr > th {
+  padding-top: 0px;
+}
+
+a.disabled {
+  color: lightgray;
+  cursor: text;
+  text-decoration: none;
+}
+
+a.maybe {
+  color: gray;
+}
+
+.field {
+  font-weight: bold;
+  border-bottom: 1px solid white;
+}
+
+#advantages_dialog .modal-dialog, #disadvantages_dialog .modal-dialog, #dp_dialog .modal-dialog, #ea_advantages_dialog .modal-dialog, #mk_dialog .modal-dialog, #natural_bonus_dialog .modal-dialog {
+  width: auto;
+}
+
+#Common_Advantages, #Common_Disadvantages, #Nemesis_Abilities, #Powers {
+  column-gap: 25px;
+  column-width: 250px;
+}
+
+#EA_Common_Advantages {
+  column-gap: 25px;
+  column-width: 440px;
+}
+
+#Ki_Abilities {
+  column-gap: 25px;
+  column-width: 270px;
+}
+
+#BG_1649325064423_52972 {
+  font-size: smaller;
+}
+
