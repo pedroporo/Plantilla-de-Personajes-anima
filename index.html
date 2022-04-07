@@ -421,16 +421,16 @@
                         <option value="Warlock">Warlock</option>
                         <option value="Warrior">Guerrero</option>
                         <option value="Warrior Mentalist">Guerrero Mentalista</option>
-                        <option value="Wizard Mentalist">Wizard Mentalist</option>
-                        <option value="Warrior Summoner">Warrior Summoner</option>
-                        <option value="Weaponsmaster">Weaponsmaster</option>
-                        <option value="Wizard">Wizard</option>
+                        <option value="Wizard Mentalist">Mago Mentalista</option>
+                        <option value="Warrior Summoner">Guerrero Invocador</option>
+                        <option value="Weaponsmaster">Maestro de Armas</option>
+                        <option value="Wizard">Mago</option>
                       </select>
                       <p class="display form-control-static"> </p>
                     </div>
                   </div>
                 </div>
-                <div class="form-group"> <label for="name" class="control-label col-xs-2">Name</label>
+                <div class="form-group"> <label for="name" class="control-label col-xs-2">Nombre</label>
                   <div class="col-xs-10"><input id="Name" name="Name" class="form-control"
                       type="text"></div>
                 </div>
@@ -445,27 +445,27 @@
               </div>
               <div class="clearfix"> </div>
               <div class="col-xs-12"> <button id="choose_advantages" type="button"
-                  class="btn btn-default">Choose Advantages</button> </div>
+                  class="btn btn-default">Elige Ventagas</button> </div>
             </div>
             <div id="advantages" style="display: none;">
               <div class="panel panel-default">
-                <div class="panel-heading"><strong>Creation Points</strong> (<span
-                    id="cp_remaining"> </span> remaining out of <span id="cp_total">
+                <div class="panel-heading"><strong>Puntos de creacion</strong> (<span
+                    id="cp_remaining"> </span> de <span id="cp_total">
                   </span>)</div>
                 <div class="panel-body row">
-                  <div class="col-xs-12 col-sm-3 col-md-12"><strong>Advantages</strong></div>
+                  <div class="col-xs-12 col-sm-3 col-md-12"><strong>Ventajas</strong></div>
                   <div class="col-xs-12 col-sm-9 col-md-12"><span id="Advantages">
                     </span> <a id="add_advantage" class="btn-xs" href="#"><i class="glyphicon glyphicon-plus">
                       </i></a></div>
                   <div class="clearfix"> </div>
-                  <div class="col-xs-12 col-sm-3 col-md-12"><strong>Disadvantages</strong></div>
+                  <div class="col-xs-12 col-sm-3 col-md-12"><strong>Desventajas</strong></div>
                   <div class="col-xs-12 col-sm-9 col-md-12"><span id="Disadvantages">
                     </span> <a id="add_disadvantage" class="btn-xs" href="#"><i
                         class="glyphicon glyphicon-plus"> </i></a></div>
                 </div>
               </div>
-              <div><button id="choose_abilities" type="button" class="btn btn-default">Choose
-                  Abilities</button> <input id="dialog_level" name="dialog_level"
+              <div><button id="choose_abilities" type="button" class="btn btn-default">Elige
+                  Habilidades</button> <input id="dialog_level" name="dialog_level"
                   value="" type="hidden"> </div>
             </div>
           </div>
@@ -479,16 +479,16 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
-            <div id="ability_spend">Spend how many DP on <span id="ability_name">
+            <div id="ability_spend">¿Cuntos PD quieres de <span id="ability_name">
               </span> <span id="ability_details"> (<span id="ability_characteristic">
-                </span>)</span> this level?</div>
-            <div id="ability_save" style="display: none;">Save how many <span id="ability_primary">
-              </span> DP this level?</div>
+                </span>)</span> en este nivel?</div>
+            <div id="ability_save" style="display: none;">¿Guardas estos PD en <span id="ability_primary">
+              </span> ?</div>
             <input id="ability_level" name="ability_level" value="" type="hidden">
             <input id="ability_cost" name="ability_cost" value="" type="hidden">
             <div id="ability_dp_parent"> </div>
-            <div>Maximum currently allowed: <span id="ability_limit"> </span></div>
-            <div id="specialization_label">Specialization (if any):</div>
+            <div>Maximo permitido: <span id="ability_limit"> </span></div>
+            <div id="specialization_label">Especificacion (si tiene):</div>
             <div class="input-group" id="ability_specialization"> <input class="form-control"
                 type="text">
               <div class="input-group-btn"> <button type="button" class="btn btn-default dropdown-toggle"
@@ -507,10 +507,10 @@
           <div class="modal-body">
             <div id="advantages_tabs">
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#Common_Advantages" data-toggle="tab">Common</a></li>
+                <li class="active"><a href="#Common_Advantages" data-toggle="tab">Común</a></li>
                 <li><a href="#Background_Advantages" data-toggle="tab">Background</a></li>
-                <li><a href="#Magic_Advantages" data-toggle="tab">Magic</a></li>
-                <li><a href="#Psychic_Advantages" data-toggle="tab">Psychic</a></li>
+                <li><a href="#Magic_Advantages" data-toggle="tab">Magico</a></li>
+                <li><a href="#Psychic_Advantages" data-toggle="tab">Psychico</a></li>
               </ul>
               <div class="tab-content">
                 <div id="Common_Advantages" class="tab-pane active"> </div>
@@ -552,26 +552,26 @@
         <div class="modal-content">
           <div class="modal-body">
             <select id="Class" name="Class" class="form-control">
-              <option value="Acrobatic Warrior">Acrobatic Warrior</option>
-              <option value="Assassin">Assassin</option>
-              <option value="Dark Paladin">Dark Paladin</option>
-              <option value="Freelancer">Freelancer</option>
-              <option value="Illusionist">Illusionist</option>
-              <option value="Mentalist">Mentalist</option>
+              <option value="Acrobatic Warrior">Guerrero Acrobata</option>
+              <option value="Assassin">Asesino</option>
+              <option value="Dark Paladin">Paladin Oscuro</option>
+              <option value="Freelancer" selected="selected">De l</option>
+              <option value="Illusionist">Illusionista</option>
+              <option value="Mentalist">Mentalista</option>
               <option value="Paladin">Paladin</option>
               <option value="Ranger">Ranger</option>
-              <option value="Shadow">Shadow</option>
-              <option value="Summoner">Summoner</option>
+              <option value="Shadow">Sombra</option>
+              <option value="Summoner">Invocador</option>
               <option value="Tao">Tao</option>
-              <option value="Technician">Technician</option>
-              <option value="Thief">Thief</option>
+              <option value="Technician">Technicista</option>
+              <option value="Thief">Ladron</option>
               <option value="Warlock">Warlock</option>
-              <option value="Warrior">Warrior</option>
-              <option value="Warrior Mentalist">Warrior Mentalist</option>
-              <option value="Wizard Mentalist">Wizard Mentalist</option>
-              <option value="Warrior Summoner">Warrior Summoner</option>
-              <option value="Weaponsmaster">Weaponsmaster</option>
-              <option value="Wizard">Wizard</option>
+              <option value="Warrior">Guerrero</option>
+              <option value="Warrior Mentalist">Guerrero Mentalista</option>
+              <option value="Wizard Mentalist">Mago Mentalista</option>
+              <option value="Warrior Summoner">Guerrero Invocador</option>
+              <option value="Weaponsmaster">Maestro de Armas</option>
+              <option value="Wizard">Mago</option>
             </select>
           </div>
         </div>
@@ -587,7 +587,7 @@
               <option value="AGI">AGI</option>
               <option value="CON">CON</option>
               <option value="INT">INT</option>
-              <option value="POW">POW</option>
+              <option value="POW">POD</option>
               <option value="WP">WP</option>
               <option value="PER">PER</option>
             </select>
@@ -681,10 +681,10 @@
           <div class="modal-body">
             <div id="disadvantages_tabs">
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#Common_Disadvantages" data-toggle="tab">Common</a></li>
+                <li class="active"><a href="#Common_Disadvantages" data-toggle="tab">Coún</a></li>
                 <li><a href="#Background_Disadvantages" data-toggle="tab">Background</a></li>
-                <li><a href="#Magic_Disadvantages" data-toggle="tab">Magic</a></li>
-                <li><a href="#Psychic_Disadvantages" data-toggle="tab">Psychic</a></li>
+                <li><a href="#Magic_Disadvantages" data-toggle="tab">Magico</a></li>
+                <li><a href="#Psychic_Disadvantages" data-toggle="tab">Psychico</a></li>
               </ul>
               <div class="tab-content">
                 <div id="Common_Disadvantages" class="tab-pane active"> </div>
@@ -727,15 +727,15 @@
             <p class="text-error"> </p>
             <form class="form-horizontal" action="javascript:void(0);"> <input
                 id="dominion_character_level" type="hidden">
-              <div class="control-group"> <label class="control-label" for="dominion_tree">Tree</label>
+              <div class="control-group"> <label class="control-label" for="dominion_tree">Rama</label>
                 <div class="controls"> <input id="dominion_tree" class="form-control"
                     type="text"> </div>
               </div>
-              <div class="control-group"> <label class="control-label" for="dominion_name">Name</label>
+              <div class="control-group"> <label class="control-label" for="dominion_name">Nombre</label>
                 <div class="controls"> <input id="dominion_name" class="form-control"
                     type="text"> </div>
               </div>
-              <div class="control-group"> <label class="control-label" for="dominion_level">Level</label>
+              <div class="control-group"> <label class="control-label" for="dominion_level">Nivel</label>
                 <div class="controls">
                   <div id="dominion_level" class="spinner"> </div>
                 </div>
