@@ -33,7 +33,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
         this.Disadvantages = {};
         this.Race = '';
         this.XP = 0;
-        this.levels = [{Class: 'Freelancer', DP: {}}];
+        this.levels = [{Class: 'Libre Eleccion', DP: {}}];
     };
 
     /**
