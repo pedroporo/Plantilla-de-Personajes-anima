@@ -33,7 +33,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
         this.Disadvantages = {};
         this.Race = '';
         this.XP = 0;
-        this.levels = [{Class: 'Libre Eleccion', DP: {}}];
+        this.levels = [{Class: 'Persona de libre dedicación', DP: {}}];
     };
 
     /**
@@ -57,7 +57,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
             choice,
             choices,
             cls,
-            combat_senses = myAdvantages['Combat Senses'],
+            combat_senses = myAdvantages['Sentidos de combate'],
             count = this.levels.length,
             cr,
             each_level = 0,
@@ -73,23 +73,23 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
             specializations,
             tot_level = this.level(),
             total = 0,
-            use_of_armor = name === 'Wear Armor' && myAdvantages['Use of Armor'];
-        if (typeof level !== 'undefined') {
+            use_of_armor = name === 'Usar armadura' && myAdvantages['Uso de armadura'];
+        if (typeof level !== 'indefinida') {
             count = level === 0 ? 1 : level;
         }
-        params = myAdvantages['Natural Learner'];
+        params = myAdvantages['Alumno natural'];
         if (params && params.Ability === name) {
             each_level += params.Points * 10;
         }
-        params = myAdvantages['Natural Learner, Field'];
+        params = myAdvantages['Alumno natural, Campo'];
         if (params && params.Field === ability.Field) {
             each_level += (params.Points - 1) * 5;
         }
-        params = myAdvantages['Cultural Roots'];
+        params = myAdvantages['Raíces culturales'];
         if (params) {
             background = params;
             choices = [];
-            if (typeof params !== 'string') {
+            if (typeof params !== 'cuerda') {
                 background = params.Background;
                 choices = params.Choices;
             }
@@ -112,7 +112,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
             else {
                 amount = 0;
             }
-            if (typeof amount !== 'number') {
+            if (typeof amount !== 'número') {
                 spec = Object.keys(amount)[0];
                 if (spec === specialty) {
                     bonuses += amount[spec];
@@ -122,10 +122,10 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
                 bonuses += amount;
             }
         }
-        if ('Increased Natural Bonus' in myAdvantages) {
+        if ('Aumento de la bonificación natural' in myAdvantages) {
             nb_multiplier = 2;
         }
-        if ('Without any Natural Bonus' in myDisadvantages) {
+        if ('Sin ningún bono natural' in myDisadvantages) {
             nb_multiplier = 0;
         }
         for (i = 0; i < count; i++) {
@@ -149,13 +149,13 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
             else if (use_of_armor) {
                 bonuses += use_of_armor * 5;
             }
-            if (info['Natural Bonus'] === name) {
+            if (info['Bono natural'] === name) {
                 bonuses += this.modifier(characteristic, i + 1) * nb_multiplier;
             }
             bonuses += each_level;
         }
-        if ('Field' in ability) {
-            if ('Jack of All Trades' in myAdvantages) {
+        if ('Campo' in ability) {
+            if ('Un mil usos' in myAdvantages) {
                 total += 10;
             }
             else if (total < 5) {
@@ -165,22 +165,22 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
         if (bonuses > 50 && $.inArray(name, tables.primary_combat_abilities) !== -1) {
             bonuses = 50;
         }
-        if ('Acute Senses' in myAdvantages && $.inArray(name, ['Notice', 'Search']) !== -1) {
+        if ('Sentidos agudos' in myAdvantages && $.inArray(name, ['Darse cuenta', 'Búsqueda']) !== -1) {
             bonuses += 30;
         }
         if ('Klutzy' in this.Disadvantages && $.inArray(name, tables.klutzy) !== -1) {
             total -= 30;
         }
-        if ('Psychic Immunity' in myAdvantages && name === 'Composure') {
+        if ('Inmunidad psíquica' in myAdvantages && name === 'Calma') {
             bonuses += 60;
         }
-        if ('Seducer' in myAdvantages && name === 'Persuasion' && specialty === 'seduction') {
+        if ('Seductora' in myAdvantages && name === 'Persuasión' && specialty === 'seducción') {
             bonuses += 60;
         }
-        if ('Talented' in myAdvantages && name === 'Sleight of Hand') {
+        if ('Talentosa' in myAdvantages && name === 'Juego de manos') {
             bonuses += 30;
         }
-        if (race === 'Devah Nephilim' && $.inArray(name, ['Banish', 'Bind'])) {
+        if (race === 'Devah Nephilim' && $.inArray(name, ['Desterrar', 'Unir'])) {
             bonuses += 10;
         }
         if (specialty) {
@@ -203,7 +203,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
      * @returns {Number}
      */
     Character.prototype.appearance = function () {
-        var total = ('Appearance' in this) ? this.Appearance : 5;
+        var total = ('Apariencia' in this) ? this.Appearance : 5;
         if (this.Race === "D'Anjayni Nephilim") {
             if (total < 3) {
                 total = 3;
@@ -212,7 +212,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
                 total = 7;
             }
         }
-        if ('Unattractive' in this.Disadvantages) {
+        if ('No atractivo' in this.Disadvantages) {
             total = 2;
         }
         return total;
@@ -231,7 +231,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
         var i = (level > 0) ? level - 1 : 0,
             levels = this.levels;
         levels[i].Class = class_name;
-        if (levels.length > i + 1 && !('Versatile' in this.Advantages)) {
+        if (levels.length > i + 1 && !('Versátil' in this.Advantages)) {
             levels[i + 1].Class = class_name;
         }
     };
@@ -245,7 +245,7 @@ cultural_roots, disciplines, essential_abilities, tables, utils) {
         this.Disadvantages = {};
         this.Race = '';
         this.XP = 0;
-        this.levels = [{Class: 'Freelancer', DP: {}}];
+        this.levels = [{Class: 'Persona de libre dedicación', DP: {}}];
         if ('Created' in this) {
             delete this.Created;
         }
